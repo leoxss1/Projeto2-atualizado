@@ -1,0 +1,284 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink-bg: #fff5fa;
+    --pink-light: #fce3ef;
+    --pink: #edb5d2;
+    --pink-dark: #a02c6d;
+    --pink-deep: #842257;
+    --text: #29212a;
+    --muted: #766b73;
+    --white: #ffffff;
+    --red: #d94343;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--pink-bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+
+.cabecalho {
+    background: var(--pink-dark);
+    color: var(--white);
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    font-size: 22px;
+}
+
+.btn-voltar {
+    background: var(--white);
+    color: var(--pink-dark);
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    background: var(--pink-light);
+}
+
+/* Conteúdo */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 25px;
+}
+
+.titulo {
+    margin-bottom: 30px;
+}
+
+.titulo h1 {
+    color: var(--pink-dark);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.titulo p {
+    color: var(--muted);
+}
+
+/* Área da tabela */
+
+.conteudo {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(160, 44, 109, 0.08);
+}
+
+.topo-tabela {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.topo-tabela h2 {
+    color: var(--pink-deep);
+    font-size: 21px;
+}
+
+.btn-atualizar {
+    background: var(--pink-dark);
+    color: var(--white);
+    border: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-atualizar:hover {
+    background: var(--pink-deep);
+}
+
+/* Tabela */
+
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+thead {
+    background: var(--pink-light);
+}
+
+th, td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #f1d6e4;
+}
+
+th {
+    color: var(--pink-deep);
+    font-size: 14px;
+}
+
+td {
+    color: var(--text);
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: #fff8fb;
+}
+
+/* Tipos de usuário */
+
+.tipo {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tipo-ADMIN {
+    background: #e8ddff;
+    color: #6841a5;
+}
+
+.tipo-VENDEDOR {
+    background: #dcecff;
+    color: #2865a5;
+}
+
+.tipo-CLIENTE {
+    background: #d9f3e5;
+    color: #278052;
+}
+
+/* Seletor de tipo (alterado pelo admin) */
+
+.seletor-tipo {
+    padding: 6px 11px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.seletor-tipo:hover {
+    border-color: var(--pink-dark);
+}
+
+.seletor-tipo:disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
+
+/* Botão excluir */
+
+.btn-deletar {
+    background: var(--red);
+    color: var(--white);
+    border: none;
+    padding: 9px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-deletar:hover {
+    background: #b92e2e;
+}
+
+.btn-deletar:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Mensagens */
+
+.mensagem {
+    display: none;
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.mensagem.sucesso {
+    display: block;
+    background: #d9f3e5;
+    color: #216b43;
+}
+
+.mensagem.erro {
+    display: block;
+    background: #fde2e2;
+    color: #a52d2d;
+}
+
+.total {
+    margin-top: 20px;
+    color: var(--muted);
+    text-align: right;
+}
+
+.total strong {
+    color: var(--pink-dark);
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+
+    .cabecalho {
+        padding: 18px 5%;
+    }
+
+    .logo h2 {
+        font-size: 17px;
+    }
+
+    .container {
+        padding: 30px 15px;
+    }
+
+    .titulo h1 {
+        font-size: 25px;
+    }
+
+    .conteudo {
+        padding: 15px;
+    }
+
+    .topo-tabela {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .btn-atualizar {
+        width: 100%;
+    }
+}

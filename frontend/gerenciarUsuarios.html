@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gerenciar Usuários - Gostosuras da Karla</title>
+
+    <link rel="stylesheet" href="gerenciarUsuario.css">
+    <script src="gerenciarUsuario.js" defer></script>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="logo">
+            <h2>Gostosuras da Karla</h2>
+        </div>
+
+        <a href="home.html" class="btn-voltar">Voltar</a>
+    </header>
+
+    <main class="container">
+
+        <section class="titulo">
+            <h1>Gerenciar Usuários</h1>
+            <p>Visualize e gerencie os usuários cadastrados no sistema.</p>
+        </section>
+
+        <section class="conteudo">
+
+            <div class="topo-tabela">
+                <h2>Usuários cadastrados</h2>
+
+                <button id="btnAtualizar" class="btn-atualizar">
+                    Atualizar lista
+                </button>
+            </div>
+
+            <div id="mensagem" class="mensagem"></div>
+
+            <div class="tabela-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Tipo de usuário</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="listaUsuarios">
+                        <tr>
+                            <td colspan="5">Carregando usuários...</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+            <div class="total">
+                Total de usuários: <strong id="totalUsuarios">0</strong>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
